@@ -11,15 +11,16 @@
  * Created on 27 de enero de 2018, 10:10 PM
  */
 
-#include <cstdlib>
+#include <iostream>
+//#include <cstdlib>
 
 using namespace std;
 
 /*
  * 
  */
-int main(int argc, char** argv) {
-
+int main(void) {
+    cout << "Hola mundo" << endl;
     return 0;
 }
 
