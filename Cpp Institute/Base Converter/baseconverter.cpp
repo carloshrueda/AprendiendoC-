@@ -20,6 +20,8 @@ using namespace std;
  */
 int main(int argc, char **argv) {
     int n, b;
+    int lenvr= -1;
+    char vr[66];
 
     char num[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
                   'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
@@ -29,27 +31,26 @@ int main(int argc, char **argv) {
     cin >> n;
     cin >> b;
 
-    if (n < b) {
-        cout << num[n] << endl;
+    if (b < n) {
+        int r;
 
-    } else {
-        int r, lenvr;
-        char vr[66];
-
-        lenvr = -1;
         while (n >= b) {
             r = n % b;
             vr[++lenvr] = num[r];
 
             n = n / b;
         }
-        vr[++lenvr] = num[n];
 
-        for (int i = lenvr; i >= 0; i--) {
-            cout << vr[i];
-        }
-        cout << endl;
+
     }
+
+    //imprimir
+    cout << num[n];
+    for (int i = lenvr; i >= 0; i--) {
+        cout << vr[i];
+    }
+    cout << endl;
+
     return 0;
 }
 
