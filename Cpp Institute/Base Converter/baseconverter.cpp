@@ -24,14 +24,14 @@ int main(int argc, char **argv) {
     char vr[66];
 
     char num[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
-        'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
-        'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
-        'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
+                  'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
+                  'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
+                  'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
 
     cin >> n;
     cin >> b;
 
-    if (b < n) {
+    if (n >= b) {
         int r;
 
         while (n >= b) {
@@ -40,14 +40,14 @@ int main(int argc, char **argv) {
 
             n = n / b;
         }
-
-
     }
 
     //imprimir
     cout << num[n];
-    for (int i = lenvr; i >= 0; i--) {
-        cout << vr[i];
+    if (lenvr > -1) {
+        for (int i = lenvr; i >= 0; i--) {
+            cout << vr[i];
+        }
     }
     cout << endl;
 
